@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron')
+const path = require('path');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const isMac = process.platform === 'darwin';
@@ -14,7 +15,7 @@ const createMainWindow = () => {
       win.webContents.openDevTools();
     }
   
-    win.loadFile('index.html')
+    win.loadFile(path.join(__dirname, "../renderer/views/template.html"));
 
     Menu.setApplicationMenu(null);
 }
