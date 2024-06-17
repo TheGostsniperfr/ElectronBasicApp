@@ -4,7 +4,7 @@
   "main": "src/main/main.js",
   "scripts": {
     "start": "electronmon .",
-    "package-win": "electron-builder --win"
+    "build": "electron-builder build --win portable"
   },
   "author": "TheGostsniperfr",
   "license": "MIT",
@@ -21,7 +21,7 @@
       "output": "build"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis" 
     }
   }
 }
