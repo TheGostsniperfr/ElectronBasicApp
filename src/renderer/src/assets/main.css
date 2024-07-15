@@ -72,8 +72,8 @@ code {
   font-weight: 600;
 }
 
-.js {
-  background: -webkit-linear-gradient(315deg, #f0dc4e 40%, #f1f1f3);
+.vue {
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

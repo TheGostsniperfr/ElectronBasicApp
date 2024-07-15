@@ -1,23 +1,21 @@
-import { app, shell, BrowserWindow, ipcMain, Menu } from 'electron'
+import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
+import icon from '../../resources/icon.png?asset'
 
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    title: 'Electron Basic App',
-    width:  is.dev ? 1000 : 500,
-    height: 600,
+    width: 900,
+    height: 670,
+    show: false,
+    autoHideMenuBar: true,
+    ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
-
   })
-
-  if(is.dev) {
-    mainWindow.webContents.openDevTools();
-  }
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()

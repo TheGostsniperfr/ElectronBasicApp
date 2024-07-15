@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/main.css">
-    <title>Electron Basic App</title>
+    <meta charset="UTF-8" />
+    <title>Electron</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    />
   </head>
+
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#" onclick="loadPage('home.html')">Home</a></li>
-          <li><a href="#" onclick="loadPage('about.html')">About</a></li>
-          <li><a href="#" onclick="loadPage('settings.html')">Settings</a></li>
-        </ul>
-      </nav>
-    </header>
-    <div id="content"></div>
-    <script type="module" src="./src/renderer.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

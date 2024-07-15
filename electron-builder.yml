@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: electronbasicapp
+productName: electronvite
 directories:
   buildResources: build
 files:
@@ -11,7 +11,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: electronbasicapp
+  executableName: electronvite
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
